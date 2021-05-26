@@ -1,0 +1,53 @@
+/************************************************************************* List */
+.filters { margin-top: 0; }
+
+.items { padding: 2rem 0; overflow: hidden; }
+
+.items article h5 { margin-top: 1rem; margin-bottom: .5rem; }
+
+.items article .more { display: block; margin-bottom: .5rem; }
+
+.items article p { font-size: 1rem; margin-bottom: 1rem; }
+
+.serveThird { text-align: center; padding: 2rem; background-color: #efefef; }
+
+.iconBox { display: inline-block; width: 12.5%; margin-right: 5%; }
+
+.serveThird .iconBox { display: block; width: 100%; margin-bottom: 1.75rem; margin-right: 0; }
+
+.iconBoxInner { width: 70px; height: 70px; border: 5px solid #b2b2b2; border-radius: 50%; opacity: .4; }
+
+.serveThird .iconBoxInner { margin: 0 auto; position: relative; left: -5px; }
+
+.iconBox .iconServe { position: relative; font-size: 46px; font-weight: 500; display: inline-block; text-align: center; line-height: 60px; }
+
+.whereText { display: inline-block; vertical-align: top; width: 64%; }
+
+.serveThird .whereText { width: 100%; }
+
+.serveWide { clear: both; display: block; padding: 2.5rem; background-color: #efefef; margin-bottom: 2rem; text-align: center; }
+
+.serveWide .whereText { margin-bottom: 2rem; }
+
+@media (min-width: 1200px) { .serveWide { text-align: left; } }
+
+.serveWide .iconBox { float: none; display: block; width: 100%; margin: 0 auto 1rem auto; text-align: center; }
+
+@media (min-width: 1200px) { .serveWide .iconBox { float: left; width: 10%; margin-right: 5%; } }
+
+.serveWide .iconBox .iconBoxInner { margin: 0 auto; }
+
+@media (min-width: 1200px) { .serveWide .buttons-container { float: right; width: 20%; } }
+
+.serveWide p { margin-bottom: 0; }
+
+.highlight { display: block; clear: both; padding: 2.5rem; background-color: #efefef; margin-bottom: 2rem; }
+
+.share { margin-top: 1.5rem; }
+
+.ui-selectmenu-button { width: 280px; }
+
+.ui-selectmenu-menu .ui-menu { max-width: 280px; }
+
+@media (min-width: 1200px) { .ui-selectmenu-button { width: 340px; }
+  .ui-selectmenu-menu .ui-menu { max-width: 340px; } }

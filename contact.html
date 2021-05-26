@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Home-page</title>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <a href="#"><img src="images/banner-removebg-preview-removebg-preview.png" alt=""></a>
+            <div class="nav-link" id="navlink">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="message.html">Messages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href=""> <select name="language" id="">
+                        <option value="english">English</option>
+                        <option value="french">French</option>
+                        <option value="espanol">Spanish</option>
+                    </select></a></li>
+                    <li><a href="">Activities</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <div class="sec-title-style1 text-center max-width">
+                <div class="title">contact Us</div>
+                <div class="text"><div class="decor-left"><span></span></div><p>Reform 7</p><div class="decor-right"><span></span></div></div>
+                <div class="bottom-text">
+                        <p>We are followers of Jesus Christ, anointed and consumed with the passion of the Holy Spirit in love and grace, to see Africa become the people God has purposed her to be.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="contact-address-area">
+        <div class="container">
+                    <div class="contact-address-box contact-sec">
+                        <!--Start Single Contact Address Box-->
+                        <div class="col-sm-4 single-contact-address-box text-center">
+                            <div class="icon-holder">
+                                <span class="icon-clock-1">
+                                    <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span>
+                                </span>
+                            </div>
+                            <h3>Lorem Ipsum</h3>
+                            <h2>Lorem Ipsum is simply dummy dummy</h2>
+                        </div>
+                        <!--End Single Contact Address Box-->
+                        <!--Start Single Contact Address Box-->
+                        <div class="col-sm-4 single-contact-address-box main-branch">
+                            <h3>Lorem Ipsum</h3>
+                            <div class="inner">
+                                <ul>
+                                    <li>
+                                        <div class="title">
+                                            <h4>Address:</h4>
+                                        </div>
+                                        <div class="text">
+                                            <p>Lorem Ipsum, 40C, Lorem Ipsum dummy,<br> Lorem Ipsum, Ch 98054</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="title">
+                                            <h4>Ph & Fax:</h4>
+                                        </div>
+                                        <div class="text">
+                                            <p>+123 456 789 <br> test@info.com</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="title">
+                                            <h4>Office Hrs:</h4>
+                                        </div>
+                                        <div class="text">
+                                            <p>Mon-Fri: 9:30am - 6:30pm<br> Sat-Sun: Closed</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--End Single Contact Address Box-->
+                        <!--Start Single Contact Address Box-->
+                        <div class="col-sm-4 single-contact-address-box text-center">
+                            <div class="icon-holder">
+                                <span class="icon-question-2">
+                                    <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span>
+                                </span>
+                            </div>
+                            <h3>Lorem Ipsum</h3>
+                            <h2>Lorem Ipsum is simply dummy</h2>
+                        </div>
+
+                        <!--End Single Contact Address Box-->
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact">
+        <div class="layout">	 
+            <div class="sec-title-style1 text-center max-width">
+                <div class="title white">Contact Us</div>
+                <div class="text"><div class="decor-left"><span></span></div><p style="color: #ffffff;">Quick Contact</p><div class="decor-right"><span></span></div></div>
+                <div class="bottom-text w-p">
+                    <p>We are glad you stop by. Please how can we be of help?</p>
+                </div>
+            </div>
+            <div class="grid-8 form">
+              <form action="php/email.php" method="post" id="contact_form" name="contactForm">
+                <div class="form-inline clearfix">
+                  <div class="form-group grid-6 ">
+                    <input type="text" placeholder="name" id="exampleInputName" name="name" class="form-control">
+                  </div>
+                  <div class="form-group grid-6">
+                    <input type="email" placeholder="email address" id="exampleInputEmail" name="email" class="form-control">
+                  </div>
+                  <div class="form-group grid-6">
+                    <input type="text" placeholder="subject" id="exampleInputSubject" name="subject" class="form-control">
+                  </div>
+                  <div class="form-group grid-12">
+                    <textarea placeholder="message" id="exampleInputMessage" rows="3" name="message" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div style="display:none;" class="success" id="mail_success">Your message has been sent successfully.
+                  </div><!-- success message -->
+                  <div style="display:none;" class="error" id="mail_fail"> Sorry, error occured this time sending your message.
+                  </div><!-- error message -->
+                </div>
+                <div id="submit" class="form-group grid-12">
+                  <input type="submit" value="send" class="btn  btn-lg costom-btn" id="send_message">
+                </div>
+              </form>
+            </div> <!-- /.col-xs-12 .col-sm-offset-2 .col-sm-8 -->
+            <div class="grid-12">       
+              <div class="icon-text">
+                <span>find us on</span>
+              </div><!-- /.icon-text -->
+              <div class="icon-holder">
+                <ul>
+                  <li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div><!-- /.icon-holder -->
+            </div><!-- /.col-xs-12 -->     
+        </div>	
+    </section>	
+       
+
+ <!-------footer------->
+ <section>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <div class="logo"><a href="#"><img src="images/reform logo.jpg" alt=""></a></div>
+
+            <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+                
+                <a href="#">Blog</a>
+            
+                <a href="#">Pricing</a>
+            
+                <a href="#">About</a>
+                
+                <a href="#">Faq</a>
+                
+                <a href="#">Contact</a>
+            </p>
+            <br><br>
+            <div class="sec-title-style1 text-center max-width">
+                <div class="text"><div class="decor-left"><span></span></div><p>Reform 7 © 2021</p><div class="decor-right"><span></span></div></div>
+            </div>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>4B Idak Okpo Lane, Uyo</span> Akwa Ibom, Nigeria</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>(+234)070 1497 0207</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@reform7.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-about">
+                <span>About the church</span>
+                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+</section>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

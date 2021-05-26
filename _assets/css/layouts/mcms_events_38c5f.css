@@ -1,0 +1,193 @@
+/************************************************************************** Helper Functions - From HTML 5 Boilerplate */
+.push { clear: both; }
+
+.floatleft { float: left; }
+
+/************************************************************************** event nav */
+#content #event-nav { font-weight: 400; }
+
+#content #event-nav ul { margin: 0; padding: 0; float: right; }
+
+#content #event-nav li { list-style: none; float: left; height: 68px; line-height: 68px; padding: 0 20px; margin: 0; }
+
+#content #event-nav li.active { background: url("../../img/layouts/events/view-arrow-featured.png") no-repeat center bottom; }
+
+#content #event-nav li.featured.active { background: url("../../img/layouts/events/view-arrow-featured.png") no-repeat center bottom; }
+
+#content #event-nav li a { text-decoration: none; }
+
+#event-control-bar { position: relative; padding: 10px; height: 60px; }
+
+#event-control-bar h3 { margin: 0; }
+
+#event-control-bar.event-list { margin-bottom: 2em; }
+
+#event-control-bar .event-list-title { position: absolute; top: 15px; left: 30px; }
+
+.event-left { float: left; }
+
+.event-right { float: right; }
+
+/** Controls - Controls are separate for cal/list views because they have very different markup **/
+/* list controls */
+.list-controls { float: left; position: relative; left: 0; top: -78px; width: 240px; line-height: 30px; padding-right: 50px; text-align: left; display: none; }
+
+.list-month-title { margin: 2px 25px 0 0; line-height: 40px; /* event-control-bar height */ font-weight: 500; }
+
+.list-event-prev { float: left; position: absolute; right: 42px; top: 14px; font-size: 18px; display: none; }
+
+@media (min-width: 992px) { .list-event-prev { right: 28px; } }
+
+.list-event-next { float: left; position: absolute; right: 12px; top: 14px; font-size: 18px; display: none; }
+
+.list-event-prev.hasPrev { cursor: pointer; display: block; }
+
+.list-event-prev.hasPrev:hover { opacity: .6; }
+
+.list-event-next.hasNext { cursor: pointer; display: block; }
+
+.list-event-next.hasNext:hover { opacity: .6; }
+
+/* calendar controls */
+.calendar-month { display: block; width: 240px; float: left; margin: 0 0 0 0; line-height: 40px; /* event-control-bar height */ position: relative; top: -48px; left: 0; font-weight: 500; padding: 0; padding-right: 50px;  }
+
+.calendar-prev { cursor: pointer; display: block; position: absolute; right: 16px; top: 2px; text-align: left; font-size: 18px; }
+
+.calendar-prev:hover { opacity: .6; }
+
+.calendar-next { cursor: pointer; display: block; position: absolute; right: 0; top: 2px; text-align: left; font-size: 18px; }
+
+.calendar-next:hover { opacity: .6; }
+
+/* ---------- List ---------- */
+.list-time { width: 60px; float: left; margin-right: -80px; font-weight: 500; text-align: center; text-transform: uppercase; line-height: 1.3; }
+
+p.list-time-day, p.list-time-month { display: block; margin: 0; padding: 0; }
+
+p.list-time-day { text-transform: uppercase; font-size: 1.25em; border: 1px solid; border-top: 0; }
+
+p.list-time-month { text-transform: uppercase; font-size: 1.125em; border: 1px solid; border-bottom: 0; padding: 0; }
+
+.list-day-detail { padding-left: 80px; }
+
+.list-weekday { line-height: 1.1; font-size: 1.5em; border-bottom: 1px solid rgba(0, 0, 0, 0.15); padding-bottom: 10px; margin-bottom: 10px; margin-top: 30px; }
+
+@media (min-width: 992px) { .list-weekday { font-size: 2.5em; } }
+
+.nrf-message { text-align: center; }
+
+.day-stage { margin-top: 20px; }
+
+/* -------- Calendar ------- */
+#cal-responsive { display: none; }
+
+.calendar { width: 100%; table-layout: fixed; border: 0; text-align: left; border-collapse: collapse; }
+
+.calendar th { text-align: left; padding: 10px; line-height: 1.1; }
+
+.calendar td { text-align: left; padding: 3px; height: 75px; /* will grow ... not sure how but it does */ border: 1px solid; border-left: 0; border-top: 0; vertical-align: top; }
+
+.calendar td:first-child { border-left: 1px solid; }
+
+.calendar td > a { /* this is the clickable number */ font-weight: 300; text-decoration: none; line-height: 1.1; display: block; padding: 3px; float: left; border-radius: 3px; margin-bottom: 5px; }
+
+#content .calendar td ul { margin: 0 0 0 1.5em; }
+
+#content .calendar td ul { margin: 0 0 0 1em; padding: 0; clear: both; }
+
+#content .calendar td ul li { list-style: none; margin: 0 0 .5em 0; padding: 0; line-height: 1.1em; }
+
+#content .calendar td ul li:before { display: none; }
+
+/* Featured Events */
+#featured-events { margin-top: 3em; margin-bottom: 3em; }
+
+.featured-event { overflow: hidden; }
+
+.featured-image { position: relative; overflow: hidden; display: block; margin-bottom: 1em; text-decoration: none; width: 100%; *z-index: 0; }
+
+.featured-image img { display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; }
+
+.featured-image img.featured-image-push { width: 100%; position: relative; }
+
+.featured-description { position: absolute; left: 0; top: 0; width: 100%; height: 100%; padding: 0; opacity: 0; visibility: hidden; transition: .3s; }
+
+.featured-image:hover .featured-description { opacity: 1; visibility: visible; }
+
+#content .featured-description p { margin: 0; padding: 1rem; }
+
+.featured-event h6 { margin: .125em 0; }
+
+.event-row { margin-bottom: 1em; width: 100%; }
+
+/************************************************************************** Filtering */
+/* @group Select Menus */
+#event-control-bar .ui-selectmenu-button { margin: 0 auto 1em auto; text-align: left; }
+
+@media (min-width: 992px) { #event-control-bar .ui-selectmenu-button { float: left; margin: 0 1em 0 0; } }
+
+@media (min-width: 992px) { #module-search { clear: none; padding: 0; float: left; margin: 0 0 0 0; } }
+
+/************************************************************************** Seach field */
+#campus-filter, #category-selector { float: left; }
+
+#event-control-bar select { display: block; float: none; font-size: 16px; width: 90%; padding: 2px; margin: 0 auto 1em auto; }
+/************************************************************************** Font & Sizing */
+.event h5 { margin-bottom: .25rem; }
+
+#content #event-nav li { font-size: 1.25rem; }
+
+.list-month-title { font-size: 1.25rem; }
+
+.list-month-search h3 { margin-bottom: .25rem; }
+
+.calendar th { font-size: 1rem; text-align: center; }
+
+.calendar td { font-size: 1rem; }
+
+.calendar td ul li { font-size: .9125rem; }
+
+.calendar td ul li a { font-size: .8125rem; }
+
+.calendar-month { font-size: 1.25rem; text-transform: none; }
+
+p.list-time-day { font-size: 1.5rem; }
+
+#content .featured-description p { font-size: .9125rem; margin: 0 !important; }
+
+.featured-start { margin-bottom: 5px; }
+
+/************************************************************************** Fonts and Colors */
+#event-control-bar h3, .calendar-month, .list-month-title, .calendar td > a, .list-event-prev, .list-event-next, .calendar-prev, .calendar-next, #event-control-bar h3 span, #content #event-nav li a:hover, #content #event-nav li.active a { color: #c6ad90; }
+
+p.list-time-day, .list-weekday { color: #0a3a53; }
+
+.calendar th, .calendar td > a:hover, p.list-time-month { background-color: #0a3a53; }
+
+p.list-time-day, p.list-time-month { border-color: #0a3a53; }
+
+#event-control-bar { background-color: #ffffff; }
+
+.calendar th, .calendar td > a:hover, .list-time-month, .featured-description p { color: #ffffff; }
+
+#content #event-nav { background-color: #efefef; }
+
+.calendar td { border-color: #676767; }
+
+.featured-description { background-color: #0a3a53; }
+
+@media (max-width: 1199px) { #content #event-nav ul { float: none; }
+  #content #event-nav li { height: auto; line-height: 1.3em; text-align: center; width: 45%; padding: 2.5%; padding-top: 3%; }
+  #content #event-nav li.featured.active, #content #event-nav li.active { background: 0; }
+  #content #event-nav li a { display: inline-block; }
+  .list-controls { width: 75%; }
+  #cal-responsive { display: block; }
+  #cal-wrap { display: none; }
+  .featured-description { display: none; }
+  #event-control-bar { height: auto; text-align: center; }
+  .content.view-calendar #event-control-bar { display: none; }
+  #event-control-bar .event-right { float: none; width: 100%; padding-bottom: 10px; margin-bottom: 40px; }
+  #category-selector { float: none; margin-bottom: 10px; }
+  select.sorter { width: 80%; margin: 0 auto 1em auto; }
+  #content #event-nav li:last-child { display: none; }
+  .floatleft { float: none; margin-bottom: 10px; } }

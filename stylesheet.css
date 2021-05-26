@@ -1,0 +1,789 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Barlow Condensed", "Helvetica Neue", Arial, sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+a,
+a:active,
+a:focus {
+  color: #333;
+  text-decoration: none;
+  transition-timing-function: ease-in-out;
+  -ms-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header,
+.header {
+  background-color: #444;
+}
+
+/* ------Banner section------ */
+.text-box {
+  max-height: 50em;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(images/banner2.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 2%);
+  text-align: center;
+  font-family: "Barlow Condensed", "Helvetica Neue", Arial, sans-serif;
+  margin: 0 !important;
+}
+
+.banner-s {
+  padding-top: 4em !important;
+}
+
+.title {
+  font-size: 3em !important;
+  color: white !important;
+}
+.text-box h1 {
+  font-size: 2.5em;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.text-btn {
+  display: inline-block;
+  color: #fff;
+  padding: 12px 34px;
+  text-decoration: none;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid #fff;
+  position: relative;
+  cursor: pointer;
+}
+.text-btn:hover {
+  border: 1px solid #c6ad90;
+  background: #c6ad90;
+  transition: 1s;
+}
+nav .fa {
+  display: none;
+}
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 20px;
+  }
+}
+
+/* -----external start here----- */
+
+.sec-title-style1 {
+  position: relative;
+  display: block;
+  margin: auto;
+  padding: 0;
+}
+.sec-title-style1.max-width {
+  position: relative;
+  display: block;
+  max-width: 770px;
+  margin: -9px auto 0;
+  padding-bottom: 52px;
+}
+.sec-title-style1.pabottom50 {
+  padding-bottom: 42px;
+}
+.sec-title-style1 .title {
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.sec-title-style1 .white {
+  color: #ffffff;
+}
+.sec-title-style1 .title.clr-white {
+  color: #ffffff;
+}
+/* ------decorator start here------ */
+.sec-title-style1 .decor {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 5px;
+  margin: 19px 0 0;
+}
+.sec-title-style1 .decor:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: #c6ad90;
+  border-radius: 50%;
+  content: "";
+}
+.sec-title-style1 .decor:after {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: #c6ad90;
+  border-radius: 50%;
+  content: "";
+}
+.sec-title-style1 .decor span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 1px;
+  background: #c6ad90;
+  margin: 2px 0;
+}
+/* ------decorator ends here------ */
+
+.sec-title-style1 .text {
+  position: relative;
+  display: block;
+  margin: 7px 0 0;
+}
+.sec-title-style1 .text p {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+.sec-title-style1 .text.clr-yellow p {
+  color: #c6ad90;
+}
+/* ------decorator start here------ */
+.sec-title-style1 .text .decor-left {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  width: 70px;
+  height: 5px;
+  background: transparent;
+}
+.sec-title-style1 .text .decor-left span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 1px;
+  background: #c6ad90;
+  content: "";
+  margin: 2px 0;
+}
+.sec-title-style1 .text .decor-left:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: #c6ad90;
+  border-radius: 50%;
+  content: "";
+}
+.sec-title-style1 .text .decor-left:after {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: #c6ad90;
+  border-radius: 50%;
+  content: "";
+}
+
+.sec-title-style1 .text .decor-right {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  width: 70px;
+  height: 5px;
+  background: transparent;
+}
+.sec-title-style1 .text .decor-right span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 1px;
+  background: #c6ad90;
+  content: "";
+  margin: 2px 0;
+}
+.sec-title-style1 .text .decor-right:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: #c6ad90;
+  border-radius: 50%;
+  content: "";
+}
+.sec-title-style1 .text .decor-right:after {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: #c6ad90;
+  border-radius: 50%;
+  content: "";
+}
+/* ------decorator ends here------ */
+
+.sec-title-style1 .bottom-text {
+  position: relative;
+  display: block;
+  padding-top: 16px;
+}
+.sec-title-style1 .bottom-text p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  margin: 0;
+}
+.sec-title-style1 .bottom-text.w-p p {
+  color: #fff;
+}
+.sec-title-style1 .bottom-text.clr-gray p {
+  color: #cdcdcd;
+}
+
+/* ----- contact address area----- */
+.contact-address-area {
+  position: relative;
+  display: block;
+  background: #ffffff;
+  padding: 100px 0 120px;
+}
+.contact-address-area .sec-title-style1.max-width {
+  padding-bottom: 72px;
+}
+.contact-address-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.single-contact-address-box {
+  position: relative;
+  display: block;
+  background: #131313;
+  padding: 85px 30px 77px;
+}
+.single-contact-address-box .icon-holder {
+  position: relative;
+  display: block;
+  padding-bottom: 24px;
+}
+.single-contact-address-box .icon-holder span:before {
+  font-size: 75px;
+}
+.single-contact-address-box h3 {
+  color: #ffffff;
+  margin: 0px 0 9px;
+}
+.single-contact-address-box h2 {
+  color: #ffa500;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 19px;
+}
+.single-contact-address-box a {
+  color: #ffffff;
+}
+
+.single-contact-address-box.main-branch {
+  background: #ffa500;
+  padding: 53px 30px 51px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+.single-contact-address-box.main-branch h3 {
+  color: #131313;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 38px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.single-contact-address-box.main-branch .inner {
+  position: relative;
+  display: block;
+}
+.single-contact-address-box.main-branch .inner ul {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.single-contact-address-box.main-branch .inner ul li {
+  position: relative;
+  display: block;
+  padding-left: 110px;
+  border-bottom: 1px solid #737373;
+  padding-bottom: 23px;
+  margin-bottom: 24px;
+}
+.single-contact-address-box.main-branch .inner ul li:last-child {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.single-contact-address-box.main-branch .inner ul li .title {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: inline-block;
+}
+.single-contact-address-box.main-branch .inner ul li .title h4 {
+  color: #131313;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: capitalize;
+  border-bottom: 2px solid #a5821e;
+}
+
+.single-contact-address-box.main-branch .inner ul li .text {
+  position: relative;
+  display: block;
+}
+.single-contact-address-box.main-branch .inner ul li .text p {
+  color: #131313;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.layout {
+  margin: 0;
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+}
+/********Grid Widht *******/
+
+.form-group {
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+.grid-8 {
+  width: 66.6667%;
+}
+.grid-12 {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+/***Section Css******/
+
+.section {
+  background: #131313;
+  padding: 30px 0;
+}
+.text-center {
+  text-align: center;
+}
+.section-title {
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.contact p {
+  color: #929292;
+  letter-spacing: 1.5px;
+  padding-top: 50px;
+}
+.form {
+  margin: 0 auto;
+}
+.form form {
+  margin-top: 50px;
+}
+input {
+  width: 100%;
+}
+.form-control {
+  width: 100%;
+}
+.form-control {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #555;
+  display: block;
+  font-size: 14px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.costom-btn {
+  background: #ffa500;
+  border: 1px solid #fff;
+  color: #ffffff;
+  font: bold 16px/18px "Open Sans", sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.form-group {
+  margin-top: 23px;
+}
+.icon-text {
+  color: #ffffff;
+  font: 16px/22px "Open Sans", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 25px 0;
+}
+.icon-holder {
+  margin: 0 auto;
+  width: 265px;
+}
+.icon-holder ul li a {
+  color: #ffffff;
+  height: 38px;
+  width: 38px;
+}
+.icon-holder ul li {
+  display: inline;
+  padding: 12px;
+}
+@media (max-width: 980px) {
+  .layout {
+    width: 80%;
+  }
+  .grid-6 {
+    width: 50%;
+  }
+}
+@media (max-width: 640px) {
+  .layout {
+    width: 80%;
+  }
+  .form-group,
+  .grid-8 {
+    width: 100%;
+  }
+}
+/* -----external ends here----- */
+
+/* goal us section */
+.goal {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+.row {
+  margin: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.goal-column {
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.goal-column:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+.about-us {
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  align-items: center;
+}
+.about-col {
+  flex-basis: 48%;
+  padding: 10px 2px;
+}
+.about-col img {
+  width: 100%;
+}
+.about-col h1 {
+  padding-top: 0;
+  width: 100%;
+}
+.about-col p {
+  padding: 15px 0 25px;
+}
+.red-btn {
+  color: #c6ad90;
+  border: 1px solid #c6ad90;
+  background: transparent;
+}
+.red-btn:hover {
+  color: #fff;
+}
+.smaller {
+  font-size: 24px;
+}
+
+/* -------footer start here----- */
+.footer-distributed {
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+/* The church logo */
+
+.logo img {
+  width: 150px;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-church-name {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: lightseagreen;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
