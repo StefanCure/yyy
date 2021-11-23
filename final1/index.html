@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A2z Fin</title>
+  <!-- Bootstrap Css Start Here -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles1.css" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="my-nav">
+    <div class="nav-center">
+      <div class="nav-header">
+        <img src="./images/logo.svg" class="nav-logo" alt="" />
+        <button class="btn-my toggle-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <button class="link-btn">Home</button>
+        </li>
+        <li>
+          <button class="link-btn">Borrower Profile</button>
+        </li>
+        <li>
+          <button class="link-btn">Lender Profile</button>
+        </li>
+        <li>
+          <button class="link-btn">FAQ</button>
+        </li>
+      </ul>
+      <button class="btn1 btt01 signin-btn">Connect</button>
+      <button class="btn1 btt01 signin-btn">Login</button>
+    </div>
+  </nav>
+  <!-- hero  -->
+  <main class="hero">
+    <section class="sec_1">
+      <div class="intro_sec1">
+        <h2 class="intro-title">We are A2z Fin</h2>
+        <p>Get Crypto Loans Instantly, Regardless of Your Credit Rating</p>
+      </div>
+      <div class="container my_tab_contain">
+        <div class="row">
+          <div class="col-lg-12 col-xs-12 ">
+            <ul class="nav nav-pills mb-4 my_tab_nav" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="true"><span class="span">Borrow</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                  aria-selected="false"><span class="span">Lend</span></a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane show fade active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <form class="auth-register-form mt-2" action="">
+                  <div class="my-form">
+                    <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Collateral</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username"
+                        placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                    <div class="form-group step">
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">BNB</option>
+                        <option value="ETH">ETH</option>
+                        <option value="BTC">BTC</option>
+                      </select>
+  
+                    </div>
+                  </div>
+                  <div class="my-form">
+                    <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Duration</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username"
+                        placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                    <div class="form-group step1">
+                      <label class="form-label" for="register-number"></label>
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">Weeks</option>
+                        <option value="ETH">Months</option>
+                      </select>
+  
+                    </div>
+                  </div>
+                  <div class="my-form">
+                    <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Loan Amount</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username"
+                        placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                    <div class="form-group step2">
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">USDT</option>
+                        <option value="ETH">ETH</option>
+                        <option value="BTC">BTC</option>
+                      </select>
+  
+                    </div>
+                  </div>
+                  <div class="my_slipage">
+                    <label class="form-label">LTV</label>
+                    <div class="slipage">
+                      <label class="per">25%</label>
+                      <label class="per">50%</label>
+                      <label class="per">65%</label>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary btn-block my-btt" tabindex="5">SEND</button>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <form class="auth-register-form mt-2" action="">
+                  <div class="my-form">
+                    <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Maximum loan amount</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username"
+                        placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                    <div class="form-group step">
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">BNB</option>
+                        <option value="ETH">ETH</option>
+                        <option value="BTC">BTC</option>
+                      </select>
+  
+                    </div>
+                  </div>
+                  <div class="my-form">
+                    <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Duration</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username"
+                        placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                    <div class="form-group step1">
+                      <label class="form-label" for="register-number"></label>
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">Weeks</option>
+                        <option value="ETH">Months</option>
+                      </select>
+  
+                    </div>
+                  </div>
+                  <div class="my-form">
+                    <div class="form-group step3">
+                      <label class="form-label" for="register-username">Collateral</label>
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">USDT</option>
+                        <option value="ETH">ETH</option>
+                        <option value="BTC">BTC</option>
+                      </select>
+  
+                    </div>
+                  </div>
+                  <button class="btn btn-primary btn-block my-btt" tabindex="5">SEND</button>
+                </form>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  
+    <!-- section Category -->
+  
+  </main>
+  <!-- sidebar -->
+  <div class="sidebar-wrapper">
+    <aside class="sidebar">
+      <button class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="sidebar-links"></div>
+      <!-- links -->
+    </aside>
+  </div>
+  <!-- links -->
+  <aside class="submenu"></aside>
+
+  <footer>
+    <div class="foot-title">
+      <p> © A2Z fin, 2021. All Rights Reserved </p>
+    </div>
+  
+  </footer>
+
+
+  <!-- Jquery Js Start Here -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap Js Start Here -->
+  <script src="js/bootstrap.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
