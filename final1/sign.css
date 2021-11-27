@@ -1,0 +1,17 @@
+@media screen and (max-width: 991px) {
+  .my__heading {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .my__heading {
+    padding-top: 80px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .my_own {
+    display: flex;
+    align-items: center !important;
+    justify-self: center;
+  }
+}

@@ -2,7 +2,7 @@ const sublinks = [
   {
     page: 'Home',
     links: [
-      { label: 'home', url: 'index.html' }
+      { label: 'home', url: 'p2p.html' }
     ],
   },
   {

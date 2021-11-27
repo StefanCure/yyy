@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
   <!-- stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles1.css" />
+  <link rel="stylesheet" href="stylesP2p.css" />
+  <link rel="stylesheet" href="stylesP2p1.css" />
 </head>
 
 <body>
@@ -25,7 +25,7 @@
   <nav class="my-nav">
     <div class="nav-center">
       <div class="nav-header">
-        <img src="./images/logo.svg" class="nav-logo" alt="" />
+        <img src="./image/logo.svg" class="nav-logo" alt="" />
         <button class="btn-my toggle-btn">
           <i class="fas fa-bars"></i>
         </button>
@@ -58,7 +58,7 @@
       <div class="container my_tab_contain">
         <div class="row">
           <div class="col-lg-12 col-xs-12 ">
-            <ul class="nav nav-pills mb-4 my_tab_nav" id="myTab" role="tablist">
+            <ul class="nav nav-pills my_tab_nav" id="myTab" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
                   aria-selected="true"><span class="span">Borrow</span></a>
@@ -75,7 +75,7 @@
                     <div class="form-group input_first">
                       <label class="form-label" for="register-username">Collateral</label>
                       <input class="form-control" id="register-username" type="text" name="register-username"
-                        placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1" />
+                        placeholder="200" aria-describedby="register-username" autofocus="" tabindex="1" />
                     </div>
                     <div class="form-group step">
                       <select class="form-control my-select" placeholder="currency" tabindex="6" required>
@@ -86,12 +86,14 @@
   
                     </div>
                   </div>
+                  
                   <div class="my-form">
                     <div class="form-group input_first">
-                      <label class="form-label" for="register-username">Duration</label>
+                      <label class="form-label" for="register-username">Max. Duration</label>
                       <input class="form-control" id="register-username" type="text" name="register-username"
-                        placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1" />
+                        placeholder="3" aria-describedby="register-username" autofocus="" tabindex="1" />
                     </div>
+                    
                     <div class="form-group step1">
                       <label class="form-label" for="register-number"></label>
                       <select class="form-control my-select" placeholder="currency" tabindex="6" required>
@@ -103,9 +105,41 @@
                   </div>
                   <div class="my-form">
                     <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Min. Duration</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username" placeholder="1"
+                        aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                  
+                    <div class="form-group step1">
+                      <label class="form-label" for="register-number"></label>
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">Weeks</option>
+                        <option value="ETH">Months</option>
+                      </select>
+                  
+                    </div>
+                  </div>
+                  <div class="my-form">
+                    <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Expiration</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username" placeholder="3"
+                        aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                  
+                    <div class="form-group step1">
+                      <label class="form-label" for="register-number"></label>
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">Weeks</option>
+                        <option value="ETH">Months</option>
+                      </select>
+                  
+                    </div>
+                  </div>
+                  <div class="my-form">
+                    <div class="form-group input_first">
                       <label class="form-label" for="register-username">Loan Amount</label>
                       <input class="form-control" id="register-username" type="text" name="register-username"
-                        placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1" />
+                        placeholder="150" aria-describedby="register-username" autofocus="" tabindex="1" />
                     </div>
                     <div class="form-group step2">
                       <select class="form-control my-select" placeholder="currency" tabindex="6" required>
@@ -131,32 +165,82 @@
                 <form class="auth-register-form mt-2" action="">
                   <div class="my-form">
                     <div class="form-group input_first">
-                      <label class="form-label" for="register-username">Maximum loan amount</label>
-                      <input class="form-control" id="register-username" type="text" name="register-username"
-                        placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1" />
+                      <label class="form-label" for="register-username">Max Loan Amt</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username" placeholder="3"
+                        aria-describedby="register-username" autofocus="" tabindex="1" />
                     </div>
-                    <div class="form-group step">
-                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
-                        <option value="BNB">BNB</option>
-                        <option value="ETH">ETH</option>
-                        <option value="BTC">BTC</option>
-                      </select>
-  
-                    </div>
-                  </div>
-                  <div class="my-form">
-                    <div class="form-group input_first">
-                      <label class="form-label" for="register-username">Duration</label>
-                      <input class="form-control" id="register-username" type="text" name="register-username"
-                        placeholder="johndoe" aria-describedby="register-username" autofocus="" tabindex="1" />
-                    </div>
+                  
                     <div class="form-group step1">
                       <label class="form-label" for="register-number"></label>
                       <select class="form-control my-select" placeholder="currency" tabindex="6" required>
                         <option value="BNB">Weeks</option>
                         <option value="ETH">Months</option>
                       </select>
-  
+                  
+                    </div>
+                  </div>
+                  <div class="my-form">
+                    <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Mini Loan Amt</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username" placeholder="3"
+                        aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                  
+                    <div class="form-group step1">
+                      <label class="form-label" for="register-number"></label>
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">Weeks</option>
+                        <option value="ETH">Months</option>
+                      </select>
+                  
+                    </div>
+                  </div>
+                  <div class="my-form">
+                    <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Max Duration</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username" placeholder="3"
+                        aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                  
+                    <div class="form-group step1">
+                      <label class="form-label" for="register-number"></label>
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">Weeks</option>
+                        <option value="ETH">Months</option>
+                      </select>
+                  
+                    </div>
+                  </div>
+                  <div class="my-form">
+                    <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Mini Duration</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username" placeholder="3"
+                        aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                  
+                    <div class="form-group step1">
+                      <label class="form-label" for="register-number"></label>
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">Weeks</option>
+                        <option value="ETH">Months</option>
+                      </select>
+                  
+                    </div>
+                  </div>
+                  <div class="my-form">
+                    <div class="form-group input_first">
+                      <label class="form-label" for="register-username">Expiration</label>
+                      <input class="form-control" id="register-username" type="text" name="register-username" placeholder="3"
+                        aria-describedby="register-username" autofocus="" tabindex="1" />
+                    </div>
+                  
+                    <div class="form-group step1">
+                      <label class="form-label" for="register-number"></label>
+                      <select class="form-control my-select" placeholder="currency" tabindex="6" required>
+                        <option value="BNB">Weeks</option>
+                        <option value="ETH">Months</option>
+                      </select>
+                  
                     </div>
                   </div>
                   <div class="my-form">

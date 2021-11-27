@@ -48,6 +48,7 @@ Stripe Styles
   }
   .nav-links {
     display: block;
+    justify-items: center;
     justify-self: center;
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
@@ -191,4 +192,63 @@ Stripe Styles
 .submenu-center i {
   color: var(--clr-grey-5);
   margin-right: 1rem;
+}
+
+.mtable-sec {
+  padding: 75px 5px 2em 5px;
+  margin: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .mtable-sec {
+    padding: 2em 4em;
+  }
+}
+
+.span {
+  display: block;
+  font-weight: 700;
+}
+
+.my_tab_link {
+  text-decoration: none !important;
+  font-weight: 700;
+}
+.table_title {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.table_head {
+  color: #2c84ef;
+  background-color: black;
+  font-weight: 700;
+  border-top: none !important;
+}
+
+td div {
+  text-align: center;
+}
+tbody {
+  background-color: #171a23;
+  font-weight: 700;
+  color: #fff !important;
+}
+tr:hover {
+  background-color: #232838 !important;
+  color: #fff !important;
+  opacity: 0.8 !important;
+}
+
+.table_head1 {
+  font-weight: 700;
+}
+.t_head {
+  padding: 0.8em 0.5em;
+}
+.even {
+  font-weight: 400;
+  font-size: 0.9em;
+  padding: 1em 0.5em;
+  color: #fff;
 }
