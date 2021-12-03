@@ -568,7 +568,9 @@ footer {
 .step1 {
   margin-top: 0.5em;
 }
-
+.st001 {
+  margin-top: 0em !important;
+}
 .step2 {
   margin-top: 2em;
 }
@@ -578,6 +580,22 @@ footer {
 .my_slipage {
   display: flex;
   flex-direction: column;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+}
+.check1 {
+  display: flex;
+}
+
+.check_label {
+  margin-bottom: 7px;
+  margin-top: 0px;
+}
+.check_label label {
+  color: #fff !important;
 }
 
 .slipage {
@@ -591,10 +609,18 @@ footer {
   border-radius: 2em;
   padding: 0.5em 1.5em;
   font-size: 0.8em;
-  transition: color 150ms ease-in-out, border-color 150ms ease-in-out;
+  transition: color  border-color 150ms ease-in-out;
 }
 
 .per:hover {
   border-color: var(--clr-white);
-  color: #034389;
+  color: #fff;
+}
+
+
+
+.indicate_Ltv {
+  background-color: #034389;
+  font-weight: 700;
+  color: #fff;
 }
