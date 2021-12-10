@@ -33,6 +33,28 @@ var radio = document.getElementsByName('Partial_filling');// different ways of s
 const ltValue = [...document.querySelectorAll('.per')];
 
 
+const form001 = document.getElementById('form1');
+const loanToken = document.getElementById('load_token');
+const maxLoadAmt = document.getElementById('max_load_amt');
+const minLoadAmt = document.getElementById('min_load_amt');
+const collateral001 = document.getElementById('collateral001');
+const msg1 = document.getElementById('mgs001');
+const msg2 = document.getElementById('msg002');
+const msg3 = document.getElementById('msg003');
+const msg4 = document.getElementById('msg004');
+const loanDuration001 = document.getElementById('dura');
+const maxDuration001 = document.getElementById('max_dura');
+const minDuration001 = document.getElementById('min_dura');
+const form1Expiration = document.getElementById('form1_expiration');
+const exSelect001 = document.getElementById('ex_select001');
+const ltValue001 = [...document.querySelectorAll('#per001')];
+const send002 = document.getElementById('send002');
+//const form1 = document.getElementById('form1');
+//const form1 = document.getElementById('form1');
+
+
+
+
 // hide/show sideabar
 toggleBtn.addEventListener('click', () => {
   sidebarWrapper.classList.add('show');
@@ -108,7 +130,7 @@ form.addEventListener('focusout', (e) => {
   if ( parseInt(expiration.value) > 72 ){
       errorElement.innerText = 'Maximum expiration time is 72 hours';
   }
-  else if ( parseInt(loanDuration.value) <= expirationDay ){
+  else if ( parseInt(loanDuration.value) < expirationDay ){
       errorElement.innerText = 'Expiration time must be less than or equal to loan duration';
   }
   else if (parseInt(loanDuration.value) > expirationDay) {
@@ -216,7 +238,7 @@ mySubmit.addEventListener('click', (e) => {
 
       });
     }
-    let partialFilled;
+    let partialFilled = "not allowed";
     myCheck01.forEach((radioBtn) => {
         if (radioBtn.checked === true){
           //console.log(`my radio value is ${radioBtn.value}`);
@@ -243,4 +265,110 @@ mySubmit.addEventListener('click', (e) => {
 
 cancelPopSubmit.addEventListener('click', () => {
   confirmPage.classList.remove('confirm_show');
+})
+
+
+form001.addEventListener('focusout', (e) => {
+  
+  //let expirationDay = parseInt(expiration.value)/24
+
+    if ( parseFloat(minLoadAmt.value) >= parseFloat(maxLoadAmt.value)){
+      msg2.innerText = 'Max load amount must be greater min load';
+    }
+    if (parseFloat(minLoadAmt.value) < parseFloat(maxLoadAmt.value)) {
+      msg2.innerText = "";
+    }
+    if ( parseFloat(maxDuration001.value) <= parseFloat(minDuration001.value) ){
+      msg3.innerText = 'max duration must be greater than min duration';
+    }
+    if (parseFloat(maxDuration001.value) > parseFloat(minDuration001.value)) {
+      msg3.innerText = "";
+    }
+    if (parseFloat(form1Expiration.value) < 1 || parseFloat(form1Expiration.value) > 72 ) {
+      msg4.innerText = "Expiration must be greater than 1hr and less than 72hrs";
+      //console.log(`my upper: ${parseInt(minLoadAmt.value)}`);
+    }
+    if (parseFloat(form1Expiration.value) >= 1 && parseFloat(form1Expiration.value) <= 72  ) {
+      msg4.innerText = "";
+      //console.log(parseInt(minLoadAmt.value));
+    }
+
+});
+
+ltValue001.forEach(function(label){
+  label.addEventListener('click', (e) => {
+    if(maxLoadAmt.value === '' || maxLoadAmt.value == null || maxDuration001.value === '' || maxDuration001.value == null) {
+      msg1.innerText = "Please input Load amount and loan duration"
+      }
+    else {
+
+      let d001;  
+      let interest001;
+      let myDuration001;
+      let interestRate001;
+      let collateralAmt
+      if (loanDuration001.value === 'Weeks') {
+            myDuration001 = parseInt(maxDuration001.value)*7
+            //console.log(`duration = ${myDuration}`);
+      }
+      if (loanDuration001.value === 'Days') {
+           myDuration001 = parseInt(maxDuration001.value)
+      }
+      d001 = myDuration001
+      if (myDuration001 <= 7) {
+        d001 = 7;
+      }
+      
+      //console.log(`duration = ${myDuration}`);
+      
+      ltValue001.forEach(function(div){
+        div.classList.remove('indicate_Ltv');
+        e.target.classList.add('indicate_Ltv');
+        //console.log(e.target.innerText)
+          
+        if (e.target.innerText === '25%') {
+          interest001 = 0.57;
+         } 
+        else if (e.target.innerText === '50%') {
+          interest001 = 0.86;
+        }
+        else if (e.target.innerText === '65%') {
+            interest001 = 1.14;
+        }
+        //console.log(interest)
+      })
+      interestRate001 = interest001*d001
+      let interestAmt = interestRate001*parseInt(maxLoadAmt.value)/100;
+      //console.log(`duration = ${d}`);
+      //console.log(`interestRate = ${interestRate}`);
+  
+      msg1.innerText = `Total interest to be paid = ${interestRate001}% and that amount to ${interestAmt}${collateral001.value}`
+    }
+
+  });
+})
+
+send002.addEventListener('click', (e) => {
+  
+  if ( parseFloat(minLoadAmt.value) >= parseFloat(maxLoadAmt.value)){
+      msg2.innerText = 'Max load amount must be greater min load';
+  }
+  else if ( parseFloat(maxDuration001.value) <= parseFloat(minDuration001.value) ){
+      msg3.innerText = 'max duration must be greater than min duration';
+  }
+  else {
+    e.preventDefault();
+    confirmSubmit.innerText = `You are about to submit a loan request of ${parseFloat(minLoadAmt.value)}${loanToken.value}.`
+  confirmSubmit1.innerText = `For a duration of ${maxDuration001.value}${loanDuration001.value}.`
+  confirmSubmit2.innerText = `Your collateral is 0.06${collateral001.value}.`
+  confirmSubmit3.innerText = `Note Your request expires in ${form1Expiration.value}${exSelect001.value}.`
+  confirmPage.classList.add('confirm_show');
+  }
+
+
+  
+  
+
+  
+
 })
