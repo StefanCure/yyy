@@ -18,6 +18,11 @@
   <!-- stylesheet -->
   <link rel="stylesheet" href="stylesP2p.css" />
   <link rel="stylesheet" href="stylesP2p1.css" />
+
+  <!-- WALLET CONNECT -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+  <script src="https://github.com/WalletConnect/walletconnect-monorepo/releases/download/1.6.6/web3-provider.min.js"></script>
 </head>
 
 <body>
@@ -44,15 +49,20 @@
           <button class="link-btn">FAQ</button>
         </li>
       </ul>
-      <button class="btn1 btt01 signin-btn">Connect</button>
-      <button class="btn1 btt01 signin-btn">Login</button>
+      <div class="ftx">
+        <button class="btn1 btt01" id="login__button">Connect</button>
+      </div>
+      
     </div>
+
   </nav>
+  
   <!-- hero  -->
   <main class="hero">
+    
     <section class="sec_1">
       <div class="intro_sec1">
-        <h2 class="intro-title">We are A2z Fin</h2>
+        <h2 class="intro-title" id="we__click">We are A2z Fin</h2>
         <p>Get Crypto Loans Instantly, Regardless of Your Credit Rating</p>
       </div>
       
@@ -74,9 +84,8 @@
                 <form class="auth-register-form mt-2" id="form" action="">
                   <div class="my-form">
                     <div class="form-group input_first">
-                      <label class="form-label" for="register-username">Loan Amount</label>
-                      <input class="form-control" type="text" name="Loan_Amt" placeholder="150" id="Loan_Amt"
-                        aria-describedby="register-username" autofocus="" />
+                      <label class="form-label" >Loan Amount</label>
+                      <input class="form-control" type="text" required id="Loan_Amt" autofocus="" />
                     </div>
                     <div class="form-group step2">
                       <select class="form-control my-select" id="loan_currency"  required >
@@ -88,22 +97,21 @@
                     </div>
                   </div>
                   <div class="my-form">
-                    <div class="form-group step3">
-                      <label class="form-label" for="register-username">Collateral</label>
+                    <div class="step3">
+                      <label class="form-label">Collateral</label>
                       <select class="form-control my-select" id="my_collateral" required>
                         <option value="ETH">ETH</option>
-                        <option value="BTC">BTC</option>
                         <option value="BNB">BNB</option>
                       </select>
+                      <label class="error" id="error001"></label>
                   
                     </div>
                   </div>
                   
                   <div class="my-form">
                     <div class="form-group input_first">
-                      <label class="form-label" for="register-username">Loan Duration</label>
-                      <input class="form-control" type="text" name="loan_duration"
-                        placeholder="3" aria-describedby="register-username" id="loan_duration" required />
+                      <label class="form-label">Loan Duration</label>
+                      <input class="form-control" type="text"  id="loan_duration" required />
                     </div>
                     
                     <div class="form-group step1">
@@ -116,16 +124,16 @@
                     </div>
                   </div>
                   <div class="my-form">
-                    <div class="form-group input_first">
+                    <div class="input_first">
                       <label class="form-label" for="register-username">Expiration</label>
-                      <input class="form-control" type="text" placeholder="3" id="expiration" />
+                      <input class="form-control" type="text" required id="expiration" />
                       <label class="error" id="error"></label>
 
                     </div>
                   
                     <div class="form-group step1">
                       <label class="form-label" for="register-number"></label>
-                      <select class="form-control my-select" placeholder="currency" id="ex_time" required>
+                      <select class="form-control my-select" id="ex_time" required>
                         <option value="hours">Hours</option>
                       </select>
                   
@@ -151,11 +159,13 @@
                   <div class="my_slipage">
                     <label class="form-label">LTV</label>
                     <label class="error" id="error1"></label>
+                    <label class="error" id="error005"></label>
                     <div class="slipage">
-                      <label class="per" id="per1">25%</label>
-                      <label class="per" id="per2">50%</label>
-                      <label class="per" id="per3">65%</label>
+                      <label class="per per1" id="per1">25%</label>
+                      <label class="per per1" id="per2">50%</label>
+                      <label class="per per1" id="per3">65%</label>
                     </div>
+                    
                   </div>
                   <button class="btn btn-primary btn-block my-btt" id="submit" >SEND</button>
                 </form>
@@ -164,7 +174,7 @@
                 <form class="auth-register-form mt-2" id="form1" action="">
                   <div class="my-form">
                     <div class="form-group step3">
-                      <label class="form-label" for="register-username">Loan Token</label>
+                      <label class="form-label" >Loan Token</label>
                       <select class="form-control my-select" placeholder="currency" id="load_token"  required>
                         <option value="USDT">USDT</option>
                         <option value="BUSD">BUSD</option>
@@ -174,28 +184,27 @@
                     </div>
                   </div>
                   <div class="my-form">
-                    <div class="form-group input_first">
-                      <label class="form-label" for="register-username">Max Loan Amt</label>
+                    <div class="input_first no_margin_buttom">
+                      <label class="form-label">Max Loan Amt</label>
                       <input class="form-control" id="max_load_amt" type="text" required />
                       <label class="error" id="msg002"></label>
                     </div>
                   
-                    <div class="form-group step1 st001">
-                      <label class="form-label" for="register-number">Min Loan Amt</label>
+                    <div class="step1 st001 no_margin_buttom">
+                      <label class="form-label" >Min Loan Amt</label>
                       <input class="form-control" id="min_load_amt" type="text" required>
                   
                     </div>
                   </div>
                   
                   <div class="my-form">
-                    <div class="form-group step3">
-                      <label class="form-label" for="register-username">Collateral</label>
+                    <div class="step3">
+                      <label class="form-label">Collateral</label> 
                       <select class="form-control my-select" placeholder="currency" id="collateral001" required>
                         <option value="BNB">BNB</option>
                         <option value="ETH">ETH</option>
-                        <option value="BTC">BTC</option>
                       </select>
-                  
+                      <label class="error" id="msg111"></label>
                     </div>
                   </div>
                   <div class="form-group step3">
@@ -208,13 +217,13 @@
                   </div>
                   
                   <div class="my-form">
-                    <div class="form-group input_first">
+                    <div class="input_first">
                       <label class="form-label" for="register-username">Max Duration</label>
                       <input class="form-control" id="max_dura" type="text" required />
                       <label class="error" id="msg003"></label>
                     </div>
                   
-                    <div class="form-group step1 st001">
+                    <div class="step1 st001">
                       <label class="form-label" for="register-number">Min Duration</label>
                       <input class="form-control" id="min_dura" type="text"  required />
                   
@@ -222,13 +231,13 @@
                   </div>
                   
                   <div class="my-form">
-                    <div class="form-group input_first">
+                    <div class="input_first">
                       <label class="form-label" for="register-username">Expiration</label>
                       <input class="form-control" id="form1_expiration" type="text" required />
                       <label class="error" id="msg004"></label>
                     </div>
                   
-                    <div class="form-group step1">
+                    <div class="step1">
                       <label class="form-label" for="register-number"></label>
                       <select class="form-control my-select" id="ex_select001" placeholder="currency" required>
                         <option value="Hours">Hours</option>
@@ -239,10 +248,11 @@
                   <div class="my_slipage">
                     <label class="form-label">LTV</label>
                     <label class="error" id="mgs001"></label>
+                    <label class="error" id="mgs112"></label>
                     <div class="slipage">
-                      <label class="per" id="per001">25%</label>
-                      <label class="per" id="per001">50%</label>
-                      <label class="per" id="per001">65%</label>
+                      <label class="per per2" id="per001">25%</label>
+                      <label class="per per2" id="per001">50%</label>
+                      <label class="per per2" id="per001">65%</label>
                     </div>
                   </div>
                   
@@ -259,15 +269,19 @@
   
     <!-- section Category -->
     <div class="confirm__page" id="confirm_page">
-      <div class="confirm_bdy">
-        <p id="confirm_submit"></p>
-        <p id="confirm_submit1"></p>
-        <p id="confirm_submit2"></p>
-        <p id="confirm_submit3"></p>
-        <div class="dive_btnn">
-          <button class="pop__btnn" id="confirm_pop_submit">Confirm</button>
-          <button class="pop__btnn" id="cancel_pop_submit">Cancel</button>
+      <div class="confirm_page_inner">
+
+        <div class="confirm_bdy">
+          <p id="confirm_submit"></p>
+          <p id="confirm_submit1"></p>
+          <p id="confirm_submit2"></p>
+          <p id="confirm_submit3"></p>
+          <div class="dive_btnn">
+            <button class="pop__btnn" id="confirm_pop_submit">Confirm</button>
+            <button class="pop__btnn" id="cancel_pop_submit">Cancel</button>
+          </div>
         </div>
+
       </div>
     
     </div>

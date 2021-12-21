@@ -574,6 +574,9 @@ footer {
 .step2 {
   margin-top: 2em;
 }
+.no_margin_buttom {
+  margin-bottom: 0rem !important;
+}
 .step3 {
   width: 100%;
 }
@@ -609,15 +612,13 @@ footer {
   border-radius: 2em;
   padding: 0.5em 1.5em;
   font-size: 0.8em;
-  transition: color  border-color 150ms ease-in-out;
+  transition: color border-color 150ms ease-in-out;
 }
 
 .per:hover {
   border-color: var(--clr-white);
   color: #fff;
 }
-
-
 
 .indicate_Ltv {
   background-color: #034389;

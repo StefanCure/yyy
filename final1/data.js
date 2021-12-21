@@ -2,8 +2,8 @@ const sublinks = [
   {
     page: 'Home',
     links: [
-      { label: 'Swap', url: 'index.html' },
-      { label: 'Market', url: 'p2pMarket.html' }
+      { label: 'Lend/Borrow', url: 'index.html' },
+      { label: 'Loans Market', url: 'p2pMarket.html' }
     ],
   },
   {
@@ -29,8 +29,8 @@ const sublinks = [
   {
     page: 'Details',
     links: [
-      { label: 'Connect', icon: 'fas fa-briefcase', url: 'products.html' },
-      { label: 'Login', icon: 'fas fa-briefcase', url: 'sign-in' },
+      { label: 'Connect', icon: 'fas fa-briefcase', url: '', id: 'login__button' },
+      { label: 'Login', icon: 'fas fa-briefcase', url: 'sign-in.html' },
     ],
   },
 ];
