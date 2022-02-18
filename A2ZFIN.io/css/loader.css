@@ -1,0 +1,449 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #090A4E;
+    z-index: 800;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s
+}
+
+.loader-title-container {
+    font-size: 24px;
+    font-family: avenirBold;
+    color: white;
+    margin-top: 8px;
+}
+
+.loader-subtitle-container {
+    font-size: 20px;
+    font-family: avenirMedium;
+    color: #E3E2E5;
+    height: 60px;
+}
+
+.loader-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loader-img-container {
+    height: 160px;
+    width: fit-content;
+}
+
+.dot-container {
+    height: 120px;
+}
+
+.dot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.contact-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 800;
+    padding: 50px 120px;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.popup-card {
+    height: fit-content;
+    width: 100%;
+    max-height: 780px;
+    max-width: 930px;
+    background: #060738;
+    padding: 30px 56px;
+    border-radius: 10px;
+    border: 2px solid #6526FA;
+    box-shadow: 0 63px 99px rgba(37, 38, 98, 0.37);
+}
+
+.popup-descreption {
+    font-size: 20px;
+    font-family: avenirBook;
+    color: white;
+    margin-bottom: 44px;
+    margin-top: 15px;
+}
+
+.popup-input {
+    height: 48px;
+    width: 100%;
+    font-size: 17px;
+    font-family: avenirMedium;
+    color: black;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #F5F6FA;
+    padding: 8px 10px;
+}
+
+.popup-input-container-mb {
+    margin-bottom: 28px;
+}
+
+.popup-input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.telegram-handle {
+    max-height: 120px;
+    height: 48px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    font-size: 17px;
+    font-family: avenirMedium;
+    color: black;
+    border: 2px solid #F5F6FA;
+    padding: 8px 10px;
+}
+
+textarea::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.popup-button {
+    height: 48px;
+    width: 240px;
+    background: #FF2AB6;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: avenirBold;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.popup-close-icon {
+    cursor: pointer;
+}
+
+#submit:disabled {
+    background: #d6d6d6;
+    box-shadow: none;
+    box-shadow: 0 3px 54px rgba(255, 255, 255, 0.43);
+}
+
+.popup-question-label {
+    font-size: 20px;
+    color: white;
+    font-family: AvenirBold;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-bottom: 0;
+}
+
+.question-radio-container-mb {
+    margin-bottom: 30px;
+}
+
+.popup-question {
+    font-size: 18px;
+    font-family: avenirMedium;
+    color: white;
+}
+
+.radio-btn-text {
+    font-family: AvenirMedium;
+    color: white;
+    font-size: 16px;
+}
+
+.sum-assured-radio-container {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-us-custom-radio {
+    position: relative;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 1px solid #FF2AB6;
+    background: white;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.contact-us-custom-radio::after {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    background: #FF2AB6;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transform: scale(0);
+    transition: all 0.3s;
+}
+
+.popup-radio-btn:checked+.contact-us-custom-radio::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fixed-widget-container {
+    height: fit-content;
+    width: 84px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 400;
+}
+
+.thanks-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 800;
+    padding: 50px 120px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.thanks-card {
+    height: fit-content;
+    width: fit-content;
+    background: #060738;
+    padding: 30px 60px;
+    border-radius: 10px;
+    border: 2px solid #6526FA;
+    box-shadow: 0 63px 99px rgba(37, 38, 98, 0.37);
+}
+
+.thanks-title {
+    font-size: 30px;
+    font-family: avenirBold;
+    color: white;
+}
+
+.thanks-subtitle {
+    font-size: 20px;
+    font-family: avenirMedium;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.show-popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+.error-massage {
+    display: block;
+    opacity: 1;
+    color: #ff4dc1;
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: avenirMedium;
+}
+
+.show-error {
+    opacity: 0;
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .fixed-widget-container {
+        position: fixed;
+        top: calc(100% - 60px) !important;
+        height: 60px;
+        width: 100%;
+        background: #0E0E59;
+        transform: none;
+        display: none;
+    }
+    .social-media-icon-container {
+        height: 40px !important;
+        width: 40px !important;
+        margin: auto 4px !important;
+    }
+    .social-media-inner-container {
+        height: 40px;
+        width: 40px;
+        margin: 0;
+    }
+    .social-media-link-bg {
+        height: 40px;
+        width: 40px;
+    }
+    .github-icon {
+        max-height: 26px !important;
+    }
+    .linkedin-icon {
+        max-height: 20px !important;
+    }
+    .medium-icon {
+        max-height: 26px !important;
+    }
+    .social-media-link-bg,
+    .social-media-back-container {
+        position: absolute;
+        height: 40px !important;
+        width: 40px !important;
+        display: none;
+    }
+    .thanks-card {
+        min-width: 300px;
+        padding: 30px 50px;
+    }
+    .thanks-title {
+        font-size: 26px;
+    }
+    .thanks-subtitle {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1600px) {
+    .fixed-widget-container {
+        right: 0;
+    }
+}
+
+@media(min-width: 1700px) {
+    .fixed-widget-container {
+        left: 94%;
+    }
+}
+
+@media(min-width: 1800px) {
+    .fixed-widget-container {
+        left: 92%;
+    }
+}
+
+@media(min-width: 1920px) {
+    .fixed-widget-container {
+        left: 90%;
+    }
+}
+
+.social-media-icon-container {
+    height: 46px;
+    width: 46px;
+    background: transparent;
+    margin: 0;
+}
+
+.social-media-inner-container {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.social-media-icon-container:hover .social-media-inner-container {
+    transform: rotateX(180deg);
+}
+
+.social-media-link-bg {
+    background: #B4B5FF;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+}
+
+.social-media-link-bg,
+.social-media-back-container {
+    position: absolute;
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.social-media-back-container {
+    transform: rotateX(180deg);
+}
+
+.social-media-back-icon {
+    max-height: 44px;
+}
+
+.social-media-my {
+    margin: 10px 0;
+}
+
+.medium-back-bg {
+    background: white;
+    border-radius: 50%;
+}
+
+.medium-icon {
+    height: 28px;
+}
+
+.instagram-icon {
+    height: 30px;
+}
+
+.linkedin-icon {
+    max-height: 22px;
+}
+
+.github-icon {
+    max-height: 30px;
+}
+
+.gitbook-icon {
+    max-height: 34px;
+}
+
+@media(max-width: 768px) {
+    .contact-popup {
+        min-height: 700px;
+        height: 100% !important;
+        width: 100%;
+        padding: 10px;
+        overflow-y: scroll;
+    }
+    .popup-card {
+        height: 100% !important;
+        width: 100%;
+        padding: 20px;
+        min-height: 700px;
+        overflow-y: scroll;
+    }
+    .popup-close-icon {
+        max-height: 20px;
+    }
+    .popup-descreption {
+        font-size: 15px;
+    }
+    .popup-input {
+        height: 48px;
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+    .telegram-handle {
+        height: 48px;
+        font-size: 16px;
+    }
+}

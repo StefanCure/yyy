@@ -1,0 +1,39 @@
+@font-face {
+    font-family: avenirExtraBold;
+    src: url("./../static/fonts/AvenirLTStd-Black.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: avenirBold;
+    src: url("./../static/fonts/AvenirLTStd-Heavy.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: avenirMedium;
+    src: url("./../static/fonts/AvenirLTStd-Medium.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: avenirBook;
+    src: url("./../static/fonts/AvenirLTStd-Book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ralewayExtraBold;
+    src: url("./../static/fonts/Raleway-ExtraBold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: ralewayBold;
+    src: url("./../static/fonts/Raleway-Bold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: ralewayMedium;
+    src: url("./../static/fonts/Raleway-Medium.ttf") format("opentype");
+}
+
+/* @font-face {
+  font-family: avenirBook;
+  src: url("./../static/fonts/AvenirLTStd-Book.otf") format("opentype");
+} */

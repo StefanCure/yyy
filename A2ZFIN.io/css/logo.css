@@ -1,0 +1,278 @@
+.top-header-logo {
+    margin-right: 48px;
+    margin-bottom: 12px;
+    max-height: 50px;
+    z-index: 100;
+}
+
+.logo-container {
+    max-height: 50px;
+    width: fit-content;
+}
+
+.logo-dot {
+    position: absolute;
+    animation: logo-dots 2s infinite linear;
+    z-index: 0;
+}
+
+@keyframes logo-dots {
+    0% {
+        top: -30px;
+        opacity: 1;
+    }
+    50% {
+        top: -10px;
+        opacity: 0.5;
+    }
+    100% {
+        top: 10px;
+        opacity: 0;
+    }
+}
+
+.dot-1 {
+    left: -2px;
+    max-height: 12px;
+}
+
+.dot-2 {
+    left: 10px;
+    max-height: 8px;
+    animation-delay: 0.4s;
+}
+
+.dot-3 {
+    left: 0px;
+    max-height: 8px;
+    animation-delay: 0.8s;
+}
+
+.dot-4 {
+    left: 10px;
+    max-height: 6px;
+    animation-delay: 1.2s;
+}
+
+.loader-logo {
+    max-height: 100px;
+}
+
+.loader-dot {
+    position: absolute;
+    top: -40px;
+    animation: loader-dots 1.6s infinite linear;
+}
+
+@keyframes loader-dots {
+    0% {
+        top: -44px;
+        opacity: 1;
+    }
+    50% {
+        top: -24px;
+        opacity: 1;
+    }
+    100% {
+        top: 30px;
+        opacity: 0;
+    }
+}
+
+.loader-dot-1 {
+    left: 0px;
+    max-height: 15px;
+    opacity: 0;
+}
+
+.loader-dot-2 {
+    left: 18px;
+    max-height: 10px;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.loader-dot-3 {
+    left: 4px;
+    max-height: 8px;
+    animation-delay: 0.8s;
+    opacity: 0;
+}
+
+.loader-dot-4 {
+    left: 15px;
+    max-height: 6px;
+    top: -20px;
+    animation-delay: 1.2s;
+    opacity: 0;
+}
+
+.bottom-unore-icon {
+    max-height: 100px;
+}
+
+.ecosystem-icon-container {
+    display: grid;
+    place-items: center;
+}
+
+.ecosystem-unore-icon {
+    max-height: 50px;
+}
+
+.ecosystem-dot-1 {
+    left: 1px;
+    max-height: 10px;
+    z-index: 0;
+}
+
+.ecosystem-dot-2 {
+    left: 12px;
+    max-height: 8px;
+    animation-delay: 0.4s;
+}
+
+.ecosystem-dot-3 {
+    left: 2px;
+    max-height: 6px;
+    animation-delay: 0.8s;
+}
+
+.ecosystem-dot-4 {
+    left: 10px;
+    max-height: 8px;
+    animation-delay: 1.2s;
+}
+
+.bottom-dots {
+    position: absolute;
+    top: -50px;
+    animation: bottom-dots 2s infinite linear;
+}
+
+@keyframes bottom-dots {
+    0% {
+        top: -30px;
+        opacity: 1;
+    }
+    100% {
+        top: 20px;
+        opacity: 0;
+    }
+}
+
+.bottom-dot-1 {
+    left: 0px;
+    max-height: 16px;
+}
+
+.bottom-dot-2 {
+    left: 16px;
+    max-height: 10px;
+    animation-delay: 0.4s;
+}
+
+.bottom-dot-3 {
+    left: 4px;
+    max-height: 8px;
+    animation-delay: 0.8s;
+}
+
+.bottom-dot-4 {
+    left: 14px;
+    max-height: 5px;
+    animation-delay: 1.2s;
+}
+
+@media(max-width: 768px) {
+    .logo-container {
+        max-height: 60px;
+    }
+    .loader-logo {
+        max-height: 60px;
+    }
+    .loader-dot-1 {
+        left: -2px;
+        max-height: 14px;
+    }
+    .loader-dot-2 {
+        left: 12px;
+        max-height: 10px;
+        animation-delay: 0.4s;
+    }
+    .loader-dot-3 {
+        left: 0px;
+        max-height: 8px;
+        animation-delay: 0.8s;
+    }
+    .loader-dot-4 {
+        left: 10px;
+        max-height: 6px;
+        animation-delay: 1.2s;
+    }
+    .mobile-logo {
+        max-height: 34px;
+    }
+    .mobile-logo-dot {
+        position: absolute;
+        animation: mobile-logo 2s infinite linear;
+        z-index: 0;
+    }
+    .mobile-dot-1 {
+        left: 0px;
+        max-height: 10px;
+        max-width: 10px;
+    }
+    .mobile-dot-2 {
+        left: 10px;
+        max-height: 8px;
+        animation-delay: 0.4s;
+    }
+    .mobile-dot-3 {
+        left: 2px;
+        max-height: 6px;
+        animation-delay: 0.8s;
+    }
+    .mobile-dot-4 {
+        left: 9px;
+        max-height: 5px;
+        animation-delay: 1.2s;
+    }
+    @keyframes mobile-logo {
+        0% {
+            top: -24px;
+            opacity: 1;
+        }
+        100% {
+            top: 12px;
+            opacity: 0;
+        }
+    }
+    .ecosystem-icon-container {
+        height: 90px;
+    }
+    .ecosystem-small-title {
+        margin-top: 0px;
+    }
+    .ecosystem-unore-icon {
+        max-height: 26px;
+        margin-top: 12px;
+    }
+    .ecosystem-dot-1 {
+        left: 0px;
+        max-height: 10px;
+        z-index: 0;
+    }
+    .ecosystem-dot-2 {
+        left: 8px;
+        max-height: 6px;
+    }
+    .ecosystem-dot-3 {
+        left: 1px;
+        max-height: 5px;
+    }
+    .ecosystem-dot-4 {
+        left: 6px;
+        max-height: 4px;
+    }
+}
