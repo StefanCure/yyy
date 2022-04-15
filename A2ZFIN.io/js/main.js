@@ -145,12 +145,15 @@ function isDisabled() {
     }
 }
 
-$("#contact-form").submit(function(e) {
-    e.preventDefault();
-    $("#submit").attr('disabled', 'disabled');
-    $("#submit").text("Sending . . .");
-    
-    /** 
+
+ /* 
+ 
+ $("#contact-form").submit(function(e) {
+
+
+     e.preventDefault();
+     $("#submit").attr('disabled', 'disabled');
+     $("#submit").text("Sending . . .");
 
      const mailUrl = "https://travel-api.971insurance.ae/send-uno-mail";
      $.ajax({
@@ -173,12 +176,19 @@ $("#contact-form").submit(function(e) {
              $("#thanks-popup").addClass("show-popup");
          }
      })
+
+    })
+
      */
-})
 
 $("#contact-btn").click(function() {
     messageType = "contact_us";
     $(".contact-popup").addClass("show-popup");
+    $('#submit').attr('disabled', 'disabled');
+    $("#submit").text("SUBMIT");
+    $("#name").val("");
+    $("#email").val("");
+    $("#telegramHandle").val("");
 })
 
 $("#menifesto1").click(function() {
@@ -219,33 +229,7 @@ $("#thanks-btn").click(function() {
     $(".thanks-container").removeClass("show-popup");
 })
 
-$("#question-1-container").click(function() {
-    $("#question-1-container").toggleClass("question-main-container-active");
-    $("#answer-1").toggleClass("answer-container-active");
-    $("#question-1").toggleClass("question-active");
-    $("#question-icon-1").toggleClass("rotate-question-icon")
-});
 
-$("#question-2-container").click(function() {
-    $("#question-2-container").toggleClass("question-main-container-active");
-    $("#answer-2").toggleClass("answer-container-active");
-    $("#question-2").toggleClass("question-active");
-    $("#question-icon-2").toggleClass("rotate-question-icon")
-})
-
-$("#question-3-container").click(function() {
-    $("#question-3-container").toggleClass("question-main-container-active");
-    $("#answer-3").toggleClass("answer-container-active");
-    $("#question-3").toggleClass("question-active");
-    $("#question-icon-3").toggleClass("rotate-question-icon")
-})
-
-$("#question-4-container").click(function() {
-    $("#question-4-container").toggleClass("question-main-container-active");
-    $("#answer-4").toggleClass("answer-container-active");
-    $("#question-4").toggleClass("question-active");
-    $("#question-icon-4").toggleClass("rotate-question-icon")
-});
 
 
 
@@ -344,73 +328,5 @@ slider.addEventListener('mousemove', (e) => {
 
 
 
-// let inSection = false;
 
-// $(window).scroll(function(){
-//   const windowScroll = $(window).scrollTop();
 
-//   const element = $("#line-container");
-//   const elementHeight = element[0].clientHeight;
-//   const elementTop = element.position().top;
-//   var winHeight = $(window).height();
-//   const elementBottom = (elementTop + elementHeight);
-
-//   if(windowScroll >= elementTop-500 && windowScroll <= elementBottom ){
-//     if(!inSection){
-//       $(".line").addClass("line-stroke");
-//       inSection = true;
-//     }
-//   }
-//   else{
-//     inSection = false;
-//     $(".line").removeClass("line-stroke");
-//   }
-// })
-
-const emailData = {
-    email: "",
-    type: "subscribed",
-    from: "unore"
-};
-
-$("#subscribe").attr('disabled', 'disabled');
-$("#subscribeEmail").keyup(function() {
-    const value = $(this).val();
-    emailData.email = value;
-    if (emailData.email !== "") {
-        $("#subscribe").removeAttr('disabled', 'disabled');
-    }
-})
-
-$("#subscribe").click(function(e) {
-    if (emailData.email !== "") {
-        e.preventDefault();
-        console.log("Sadkl")
-        $("#subscribe").text("Sending . . .");
-        const mailUrl = "https://travel-api.971insurance.ae/send-uno-mail";
-        $.ajax({
-            url: mailUrl,
-            type: "POST",
-            headers: {
-                "Content-Type": 'application/json'
-            },
-            data: JSON.stringify(emailData),
-            success: function(res) {
-                $("#subscribe").text("SUBSCRIBE");
-                $("#subscribeEmail").val("");
-                $("#thanks-popup").addClass("show-popup");
-            }
-        })
-    }
-})
-
-var onloadCallback = function() {
-    grecaptcha.render('html_element', {
-        'sitekey': '6LdUrX4aAAAAAAqtR2k-xakdVhdXkI2FzfVHHxIE'
-    });
-};
-
-var RecaptchaOptions = {
-    theme: 'custom',
-    custom_theme_widget: 'recaptcha_widget'
-};

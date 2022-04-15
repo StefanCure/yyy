@@ -275,7 +275,7 @@ h1 {
 }
 
 h3 {
-  font-size: 72px;
+  font-size: 45px;
   font-family: avenirExtraBold;
   color: white;
   text-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
@@ -2600,4 +2600,25 @@ h2 {
 }
 .txt__cl {
   color: #222 !important;
+}
+.my-vid {
+  display: block;
+  max-width: 100%;
+}
+.div-vid {
+  width: 50%;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+#Layer_1 {
+  margin-top: 100px;
+}
+@media (max-width: 800px) {
+  .div-vid {
+    width: 100%;
+  }
+  #Layer_1 {
+    margin-top: 0px;
+  }
 }

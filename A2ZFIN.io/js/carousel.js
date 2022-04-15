@@ -79,34 +79,6 @@ $(document).ready(function() {
 
 
 
-    // $(".owl-prev").on("click",".owl-item active",function(){
-    //   var owlCarouselActive = document.getElementsByClassName("owl-item active");
-    //   console.log(owlCarouselActive)
-    // })
-    // $(".owl-prev").click(function(){
-    //   var owlCarouselActive = document.getElementsByClassName("owl-item active");
-    //   setTimeout(function() {
-    //     console.log(owlCarouselActive)
-    //     var first = owlCarouselActive[0]; //get first item
-    //     var last = owlCarouselActive[owlCarouselActive.length - 1]; //get last item
-    //     first.style.opacity = 0.3;
-    //     last.style.opacity = 0.3;
-    //   },500)
-    // })
-
-    // $(".owl-next").click(function(){
-    //   var owlCarouselActive = document.getElementsByClassName("owl-item active");
-    //   setTimeout(function() {
-    //     console.log(owlCarouselActive)
-    //     var first = owlCarouselActive[0]; //get first item
-    //     var last = owlCarouselActive[owlCarouselActive.length - 1]; //get last item
-    //     first.style.opacity = 0.3;
-    //     last.style.opacity = 0.3;
-    //   },500)
-    // })
-
-
-
     $('.main-carousel').flickity({
         // options
         draggable: true,
